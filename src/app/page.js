@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import BgStars from "@/assets/background-stars.png";
+
 import BgImageProduct from "@/assets/bg-image-product.png";
 import ProductRecommendation01 from "@/assets/product-recommendation-01.png";
 
@@ -14,6 +16,9 @@ import ProductGallery from "./components/ProductGallery";
 export default function Home() {
 	return (
 		<>
+			<div className="w-full fixed">
+				<Image src={BgStars} />
+			</div>
 			<div className="w-full" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 80%)" }}>
 				<Image src={BgImageProduct} alt="bg-product" className="w-full md:h-[800px] h-[400px] object-cover " />
 			</div>
@@ -41,17 +46,19 @@ export default function Home() {
 											</div>
 											<div className="flex justify-between items-end">
 												<div className="flex flex-col">
-													<p className="md:flex hidden items-center lg:text-base text-sm  text-gray-200 mr-4"><TagSVG className="mr-2" />R$ 49,99</p>
+													<p className="md:flex hidden items-center lg:text-base text-sm  text-gray-200 mr-4 line-through"><TagSVG className="mr-2" />R$ 49,99</p>
 													<h2 className="lg:text-xl text-lg font-semibold flex items-center">R$ 47,49 <span className="lg:text-sm text-xs font-semibold bg-[#0BC4E5] py-1 px-2 leading-[14px] rounded-full ml-4">-33%</span></h2>
 												</div>
 												<div className="xl:block hidden">
-													<button className="object-contain bg-[#0BC4E5] hover:-translate-y-1 transition cursor-pointer h-10 shape font-semibold text-black gap-2 px-8"><CartSVG />Comprar</button>
+													<div className="box-shape">
+														<button className="object-contain bg-[#0BC4E5] cursor-pointer h-10 shape font-semibold text-black gap-2 px-8"><CartSVG />Comprar</button>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div className="xl:hidden block pt-4">
-										<button className="w-full object-contain bg-[#0BC4E5] hover:-translate-y-1 transition cursor-pointer h-10 shape font-semibold text-black gap-2 px-8 "><CartSVG />Comprar</button>
+										<button className="w-full object-contain bg-[#0BC4E5] cursor-pointer h-10 shape font-semibold text-black gap-2 px-8 "><CartSVG />Comprar</button>
 									</div>
 								</div>
 								<div className="flex xl:flex-row flex-col md:p-6 p-5 bg-[#3F434B] clip-path-element">
@@ -66,17 +73,19 @@ export default function Home() {
 											</div>
 											<div className="flex justify-between items-end">
 												<div className="flex flex-col">
-													<p className="md:flex hidden items-center lg:text-base text-sm  text-gray-200 mr-4"><TagSVG className="mr-2" />R$ 49,99</p>
+													<p className="md:flex hidden items-center lg:text-base text-sm  text-gray-200 mr-4 line-through"><TagSVG className="mr-2" />R$ 49,99</p>
 													<h2 className="lg:text-xl text-lg font-semibold flex items-center">R$ 47,49 <span className="lg:text-sm text-xs font-semibold bg-[#0BC4E5] py-1 px-2 leading-[14px] rounded-full ml-4">-33%</span></h2>
 												</div>
 												<div className="xl:block hidden">
-													<button className="object-contain bg-[#0BC4E5] hover:-translate-y-1 transition cursor-pointer h-10 shape font-semibold text-black gap-2 px-8"><CartSVG />Comprar</button>
+													<div className="box-shape">
+														<button className="object-contain bg-[#0BC4E5] cursor-pointer h-10 shape font-semibold text-black gap-2 px-8"><CartSVG />Comprar</button>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div className="xl:hidden block pt-4">
-										<button className="w-full object-contain bg-[#0BC4E5] hover:-translate-y-1 transition cursor-pointer h-10 shape font-semibold text-black gap-2 px-8 "><CartSVG />Comprar</button>
+										<button className="w-full object-contain bg-[#0BC4E5] cursor-pointer h-10 shape font-semibold text-black gap-2 px-8 "><CartSVG />Comprar</button>
 									</div>
 								</div>
 							</div>
@@ -124,7 +133,10 @@ export default function Home() {
 								<StarOutlineSVG />
 								<StarOutlineSVG />
 							</div>
-							<button className="ml-auto md:w-fit w-full bg-[#0BC4E5] hover:-translate-y-1 transition cursor-pointer h-14 shape button-product font-semibold text-black gap-2 px-10">Enviar avaliação</button>
+							<div className="box-shape">
+								<button className="ml-auto md:w-fit w-full bg-[#0BC4E5] cursor-pointer h-14 shape button-product font-semibold text-black gap-2 px-10">Enviar avaliação</button>
+
+							</div>
 						</div>
 					</div>
 					<div className="lg:block w-full hidden flex-1 flex-col clip-path-element">

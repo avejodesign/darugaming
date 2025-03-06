@@ -89,16 +89,24 @@ export default function BuyProduct() {
                 </div>
             </div>
             <div className="flex md:mb-6 mb-8">
-                <p className="flex items-center md:text-xl text-lg text-gray-200 mr-4"><TagSVG className="md:mt-2 mr-2" />R$ 49,99</p>
+                <p className="flex items-center md:text-xl text-lg text-gray-200 mr-4 line-through"><TagSVG className="mr-2" />R$ 49,99</p>
                 <h2 className="md:text-4xl text-2xl font-semibold flex items-center">R$ 47,49 <span className="text-sm font-semibold bg-[#0BC4E5] py-1 px-2 rounded-full ml-4">-33%</span></h2>
             </div>
             <div className="flex flex-col gap-3">
-                <button className="w-full bg-[#0BC4E5] hover:-translate-y-1 transition cursor-pointer h-14 shape button-product font-semibold text-black gap-2"><CartSVG />Compre agora mesmo</button>
-                <button className="w-full bg-[#0BC4E5] hover:-translate-y-1 transition cursor-pointer h-14 shape-outline button-product font-semibold text-[#00D8FF] gap-2"><UserGuestSVG />Comprar como convidado</button>
-                <button className="w-full bg-[#0BC4E5] hover:-translate-y-1 transition cursor-pointer h-14 shape normal button-product font-medium gap-2"><WishHeartSVG />Para a lista de desejos</button>
+                <div className="box-shape">
+                    <button className="w-full bg-[#0BC4E5]  cursor-pointer h-14 shape button-product font-semibold text-black gap-2"><CartSVG />Compre agora mesmo</button>
+                </div>
+                <div className="box-shape">
+                    <button className="w-full bg-[#0BC4E5]  cursor-pointer h-14 shape-outline button-product font-semibold text-[#00D8FF] gap-2"><UserGuestSVG />Comprar como convidado</button>
+                </div>
+                <div className="box-shape wish">
+                    <button className="w-full bg-[#0BC4E5]  cursor-pointer h-14 shape normal button-product font-medium gap-2"><WishHeartSVG />Para a lista de desejos</button>
+                </div>
             </div>
             <div className="border border-white opacity-20 my-8"></div>
-            <button className="w-full bg-[#0BC4E5] hover:-translate-y-1 transition cursor-pointer h-14 shape whatsapp font-medium font-semibold text-black gap-2"><WhatsappSVG />Para a lista de desejos</button>
+            <div className="box-shape whatsapp">
+                <button className="w-full bg-[#0BC4E5] cursor-pointer h-14 shape whatsapp font-medium font-semibold text-black gap-2"><WhatsappSVG />Para a lista de desejos</button>
+            </div>
             <p className="text-base font-medium py-4">Checkout seguro garantido.</p>
             <div className="flex flex-wrap gap-2 mr-10">
                 <Image src={LogoPayments01} alt="stripe" />
