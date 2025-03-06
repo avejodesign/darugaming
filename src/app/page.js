@@ -17,7 +17,7 @@ export default function Home() {
 	return (
 		<>
 			<div className="w-full fixed">
-				<Image src={BgStars} />
+				<Image src={BgStars} className="w-full "/>
 			</div>
 			<div className="w-full" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 80%)" }}>
 				<Image src={BgImageProduct} alt="bg-product" className="w-full md:h-[800px] h-[400px] object-cover " />
