@@ -14,6 +14,7 @@ import TagSVG from "@/assets/tag.svg";
 import CartSVG from "@/assets/cart.svg";
 import UserGuestSVG from "@/assets/user-guest.svg";
 import WishHeartSVG from "@/assets/wish-heart.svg";
+import WishHeartRedOutlineSVG from "@/assets/wish-heart-red-outline.svg";
 import WhatsappSVG from "@/assets/whatsapp.svg";
 
 import LogoPayments01 from "@/assets/logo-payments-01.png"
@@ -29,6 +30,9 @@ export default function BuyProduct() {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownItems = ["Standand", "Champions Edition"];
     const [selectOption, setSelectOption] = useState(dropdownItems[0]);
+
+    //Botão de Desejo
+    const [isHoveredWish, setIsHoveredWish] = useState(false);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -99,13 +103,17 @@ export default function BuyProduct() {
                 <div className="box-shape">
                     <button className="w-full bg-[#0BC4E5]  cursor-pointer h-14 shape-outline button-product font-semibold text-[#00D8FF] gap-2"><UserGuestSVG />Comprar como convidado</button>
                 </div>
-                <div className="box-shape wish">
-                    <button className="w-full bg-[#0BC4E5]  cursor-pointer h-14 shape normal button-product font-medium gap-2"><WishHeartSVG />Para a lista de desejos</button>
+                <div 
+                    className="box-shape wish"
+                    onMouseEnter={() => setIsHoveredWish(true)}
+                    onMouseLeave={() => setIsHoveredWish(false)}
+                >
+                    <button className="w-full bg-[#0BC4E5]  cursor-pointer h-14 shape normal button-product font-medium gap-2">{isHoveredWish ? <WishHeartRedOutlineSVG /> : <WishHeartSVG />}Para a lista de desejos</button>
                 </div>
             </div>
             <div className="border border-white opacity-20 my-8"></div>
             <div className="box-shape whatsapp">
-                <button className="w-full bg-[#0BC4E5] cursor-pointer h-14 shape whatsapp font-medium font-semibold text-black gap-2"><WhatsappSVG />Para a lista de desejos</button>
+                <button className="w-full bg-[#0BC4E5] cursor-pointer h-14 shape whatsapp font-medium font-semibold text-black gap-2"><WhatsappSVG />Faça sua pergunta via Whatsapp</button>
             </div>
             <p className="text-base font-medium py-4">Checkout seguro garantido.</p>
             <div className="flex flex-wrap gap-2 mr-10">
