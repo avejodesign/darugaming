@@ -51,7 +51,7 @@ export default function Home() {
 							<h2 className="md:text-2xl text-xl font-semibold md:mb-6 mb-2">Sobre</h2>
 							<div className="relative mb-10 ">
 								<p className={`md:text-lg text-sm overflow-hidden ${expandedAbout ? "" : "line-clamp-3"}`}>Sentido Aranha alerta... Coloque a máscara para mais aventuras eletrizantes de teia enquanto Marvel’s Spider-Man 2 chega ao PC. Desenvolvido pela Insomniac Games em colaboração com a Marvel e otimizado para PC pela Nixxes Software.Sentido Aranha alerta... Coloque a máscara para mais aventuras eletrizantes de teia enquanto Marvel’s Spider-Man 2 chega ao PC. Desenvolvido pela Insomniac Games em colaboração com a Marvel e otimizado para PC pela Nixxes Software.</p>
-								<span className="md:text-lg text-sm underline underline-offset-4 text-[#0BC4E5] font-semibold" onClick={toggleExpand}>{expandedAbout ? "Ver menos" : "Ver mais"}</span>
+								<span className="cursor-pointer md:text-lg text-sm underline underline-offset-4 text-[#0BC4E5] font-semibold" onClick={toggleExpand}>{expandedAbout ? "Ver menos" : "Ver mais"}</span>
 							</div>
 
 							{/* Requisitos do sistema */}
